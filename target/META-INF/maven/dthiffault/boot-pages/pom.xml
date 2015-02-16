@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>dthiffault</groupId>
+  <artifactId>boot-pages</artifactId>
+  <version>0.1.0</version>
+  <name>boot-pages</name>
+  <description>Boot task to create static pages from a layout with asset hashing support</description>
+  <url>https://github.com/DanThiffault/boot-pages</url>
+  <licenses>
+    <license>
+      <url>http://www.eclipse.org/legal/epl-v10.html</url>
+      <name>Eclipse Public License</name>
+      <comments/>
+    </license>
+  </licenses>
+  <scm>
+    <url>https://github.com/DanThiffault/boot-pages</url>
+    <tag>1c0ab5c1b03b7b485ea67e6100c53887ca80d498</tag>
+  </scm>
+  <dependencies>
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>clojure</artifactId>
+      <version>1.6.0</version>
+      <scope>provided</scope>
+      <exclusions/>
+    </dependency>
+    <dependency>
+      <groupId>boot</groupId>
+      <artifactId>core</artifactId>
+      <version>2.0.0-rc6</version>
+      <scope>provided</scope>
+      <exclusions/>
+    </dependency>
+    <dependency>
+      <groupId>adzerk</groupId>
+      <artifactId>bootlaces</artifactId>
+      <version>0.1.8</version>
+      <scope>test</scope>
+      <exclusions/>
+    </dependency>
+  </dependencies>
+</project>
