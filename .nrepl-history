@@ -1,0 +1,11 @@
+(name :aaa/bbb.css)
+(ns-name :aaa/bbb.css)
+(name :aaa
+)
+(name :aaa/bbb.css)
+(str :aaa/bbb.css)
+(namespace :aaa/bbb.css)
+(def foo :aaa/bbb.css)
+(str (namespace foo) (name foo))
+(str foo)
+(subs (str foo) 1)

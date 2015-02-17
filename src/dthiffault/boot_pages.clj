@@ -9,7 +9,8 @@
     [clojure.edn :as edn]))
 
 (def ^:private deps
-  '[[enlive "1.1.5"]])
+  '[[enlive "1.1.5"]
+    [pandect "0.5.1"]])
 
 (defn find-path [fileset filename]
   (->> fileset core/input-files (core/by-name [filename]) first tmpd/file .getPath))
@@ -26,7 +27,7 @@
       (core/with-pre-wrap fileset
         (let [cfg-files (->> fileset core/input-files (core/by-name ["pages.edn"]))
               cfg (-> cfg-files first tmpd/file io/reader (java.io.PushbackReader.) edn/read)]
-          (util/info (str "Generating pages from layouts..." (count (:pages cfg))))
+          (util/info "Generating pages from layouts...%s pages\n" (count (:pages cfg)))
           (doseq [p (:pages cfg)]
             (let [page-cfg (merge (:defaults cfg) p)
                   layout-path (find-path fileset (:layout page-cfg))
